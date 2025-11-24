@@ -156,9 +156,9 @@ export async function testUpdateFoodStatus() {
     const res = await axios.patch(
       `${API_URL}/api/food/update/available/${testFoodId}`,
       {
-        name: "Updated Test Food",
-        price: 19.99,
-        available: false
+        // name: "Updated Test Food",
+        // price: 19.99,
+        // available: false
       }
     );
 
