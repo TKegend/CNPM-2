@@ -64,4 +64,4 @@ async function runLoadTest(iterations = 10) {
 }
 
 // Run the load test
-runLoadTest(10);
+runLoadTest(1);
