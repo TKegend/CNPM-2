@@ -32,11 +32,16 @@ const Login = () => {
       });
 
       if (response.data.success) {
-        localStorage.setItem('restaurant-auth', 'true');
-        localStorage.setItem('restaurant-token', response.data.token);
-        localStorage.setItem('restaurant-email', response.data.email);
-        localStorage.setItem('restaurant-name', response.data.name);
-        localStorage.setItem('restaurant-code', response.data.restaurantCode);
+        // localStorage.setItem('restaurant-auth', 'true');
+        // localStorage.setItem('restaurant-token', response.data.token);
+        // localStorage.setItem('restaurant-email', response.data.email);
+        // localStorage.setItem('restaurant-name', response.data.name);
+        // localStorage.setItem('restaurant-code', response.data.restaurantCode);
+        sessionStorage.setItem('restaurant-auth', 'true');
+        sessionStorage.setItem('restaurant-token', response.data.token);
+        sessionStorage.setItem('restaurant-email', response.data.email);
+        sessionStorage.setItem('restaurant-name', response.data.name);
+        sessionStorage.setItem('restaurant-code', response.data.restaurantCode);
         
         toast.success('Login successful!');
         // Reload page to trigger App.jsx auth check

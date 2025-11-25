@@ -9,7 +9,8 @@ function ListFood() {
   const [loading, setLoading] = useState(true);
 
   const fetchList = async () => {
-    const token = localStorage.getItem("restaurant-token");
+    // const token = localStorage.getItem("restaurant-token");
+    const token = sessionStorage.getItem("restaurant-token");
     if (!token) {
       toast.error("Please login first");
       return;
@@ -37,7 +38,8 @@ function ListFood() {
   };
 
   const handleDelete = async (foodId) => {
-    const token = localStorage.getItem("restaurant-token");
+    // const token = localStorage.getItem("restaurant-token");
+    const token = sessionStorage.getItem("restaurant-token");
     if (!confirm("Are you sure you want to delete this food item?")) {
       return;
     }
@@ -64,7 +66,8 @@ function ListFood() {
   };
 
   const handleToggleAvailability = async (food) => {
-    const token = localStorage.getItem("restaurant-token");
+    // const token = localStorage.getItem("restaurant-token");
+    const token = sessionStorage.getItem("restaurant-token");
 
     try {
       const response = await axios.patch(

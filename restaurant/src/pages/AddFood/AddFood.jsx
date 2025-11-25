@@ -31,7 +31,8 @@ function AddFood() {
   const onSubmitHandler = async (e) => {
     e.preventDefault();
 
-    const token = localStorage.getItem("restaurant-token");
+    // const token = localStorage.getItem("restaurant-token");
+    const token = sessionStorage.getItem("restaurant-token");
     if (!token) {
       toast.error("Please login first");
       return;

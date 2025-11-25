@@ -14,7 +14,8 @@ function App() {
   const [isAuthorized, setIsAuthorized] = useState(false);
 
   useEffect(() => {
-    const auth = localStorage.getItem("restaurant-auth");
+    // const auth = localStorage.getItem("restaurant-auth");
+    const auth = sessionStorage.getItem("restaurant-auth");
     if (auth === "true") {
       setIsAuthorized(true);
     } else {
@@ -23,12 +24,17 @@ function App() {
   }, []);
 
   const handleLogout = () => {
-    // Clear all restaurant-related localStorage
-    localStorage.removeItem("restaurant-auth");
-    localStorage.removeItem("restaurant-token");
-    localStorage.removeItem("restaurant-email");
-    localStorage.removeItem("restaurant-name");
-    localStorage.removeItem("restaurant-code");
+    // Clear all restaurant-related sessionStorage (was localStorage)
+    // localStorage.removeItem("restaurant-auth");
+    // localStorage.removeItem("restaurant-token");
+    // localStorage.removeItem("restaurant-email");
+    // localStorage.removeItem("restaurant-name");
+    // localStorage.removeItem("restaurant-code");
+    sessionStorage.removeItem("restaurant-auth");
+    sessionStorage.removeItem("restaurant-token");
+    sessionStorage.removeItem("restaurant-email");
+    sessionStorage.removeItem("restaurant-name");
+    sessionStorage.removeItem("restaurant-code");
     
     setIsAuthorized(false);
     window.location.href = "/";

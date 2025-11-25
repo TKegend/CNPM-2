@@ -2,8 +2,10 @@ import React from 'react';
 import './navbar.css';
 
 const Navbar = ({ onLogout }) => {
-  const restaurantName = localStorage.getItem('restaurant-name') || 'Restaurant';
-  const restaurantCode = localStorage.getItem('restaurant-code') || '';
+  // const restaurantName = localStorage.getItem('restaurant-name') || 'Restaurant';
+  // const restaurantCode = localStorage.getItem('restaurant-code') || '';
+  const restaurantName = sessionStorage.getItem('restaurant-name') || 'Restaurant';
+  const restaurantCode = sessionStorage.getItem('restaurant-code') || '';
 
   return (
     <div className="navbar">

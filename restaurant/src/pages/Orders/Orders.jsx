@@ -9,7 +9,8 @@ const Orders = () => {
   const [activeTab, setActiveTab] = useState('new'); // new, preparing, ready, completed
 
   const fetchOrders = async () => {
-    const token = localStorage.getItem("restaurant-token");
+    // const token = localStorage.getItem("restaurant-token");
+    const token = sessionStorage.getItem("restaurant-token");
     if (!token) {
       toast.error("Please login first");
       return;
