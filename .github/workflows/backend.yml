@@ -78,7 +78,7 @@ jobs:
             else
               echo ",[\"$timestamp\",$escaped_line]" >> loki-payload.json
             fi
-          done < test-output.log
+          done < unit-test-output.log
           
           echo ']}]}' >> loki-payload.json
           
