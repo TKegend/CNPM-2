@@ -66,10 +66,10 @@ jobs:
             timestamp=$(date +%s%N)
             
             if [ "$first" = true ]; then
-              echo "[\"$timestamp\",$escaped_line]" >> loki-payload.json
+              echo "[\"$timestamp\",$escaped_line]" >> loki-unit-payload.json
               first=false
             else
-              echo ",[\"$timestamp\",$escaped_line]" >> loki-payload.json
+              echo ",[\"$timestamp\",$escaped_line]" >> loki-unit-payload.json
             fi
           done < unit-test-output.log
           
